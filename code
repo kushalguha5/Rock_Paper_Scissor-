@@ -10,6 +10,9 @@ int main() {
   //Live long and prosper
    srand(time(NULL));
   int i=0;
+   int j;
+   int k=0;
+   int l=0;
   const std::string c_rock="1";
   const std::string c_paper="2";
   const std::string c_scissor="3";
@@ -21,7 +24,18 @@ int main() {
   std::cout << "==================\n";
   std::cout << "rock paper scissors!\n";
   std::cout << "==================\n";
-  //for(int i=0;i<5;i++) {
+ 
+    while(l==0){
+    std::cout << "Enter the number of turns you want in this game:(max 10 turns can be selected):   ";
+    std::cin >> j;
+    if(j>0 && j<=10) {
+      i=j;
+      l=1;
+      break;
+    }
+    else {
+      std::cout << "Invalid Input: \nRe-enter all details\n";}
+    }
   
   do{
   int computer = rand() % 5 + 1;
@@ -207,19 +221,19 @@ if(user_choice==5) {
       c_score =c_score+0;
     }
    }
-   i++;
-  }while(i<5);
+   k++;
+  }while(k<i);
 
   //Final result:
-  std::cout<<"This is the end of the game !\n";
+  std::cout<<"\nThis is the end of the game !\n";
   if(c_score > u_score) {
-    std::cout << "The winner of this game is Computer , Points: " << c_score;
+    std::cout << "\nThe winner of this game is Computer , Points: " << c_score;
   }
   else if(u_score>c_score) {
-    std::cout << "The winner of this game is User, Points: " << u_score;
+    std::cout << "\nThe winner of this game is User, Points: " << u_score;
   }
   else {
-    std::cout << "The game is tied !";
+    std::cout << "\nThe game is tied !\n" << "Computer's points: " <<c_score << " & " << "User's points: " << u_score << "\n";
   }
 
   std::cout << "\nThank You , Goodbye!\n";
