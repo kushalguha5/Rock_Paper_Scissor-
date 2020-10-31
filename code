@@ -1,0 +1,234 @@
+/* 
+Rock Paper Scissors Lizard Spock
+(Big Bang Theory)
+*/
+
+#include <iostream>
+#include <cstdlib>
+
+int main() {
+  //Live long and prosper
+   srand(time(NULL));
+  int i=0;
+  const std::string c_rock="1";
+  const std::string c_paper="2";
+  const std::string c_scissor="3";
+  const std::string c_lizard="4";
+  const std::string c_spock="5";
+  int c_score=0;
+  int u_score=0;
+  
+  std::cout << "==================\n";
+  std::cout << "rock paper scissors!\n";
+  std::cout << "==================\n";
+  //for(int i=0;i<5;i++) {
+  
+  do{
+  int computer = rand() % 5 + 1;
+  int user_choice=0;
+
+  //printing to user
+  
+  std::cout << "Please pick one from the below: \n";
+
+  std::cout << "1) ✊\n";
+  std::cout << "2) ✋\n";
+  std::cout << "3) ✌\n";
+  std::cout << "4) 👌\n";
+  std::cout << "5) 🖖\n";
+
+  std::cout << "shoot! :  ";
+  std::cin >> user_choice;
+  std::cout << "\nYour choice: "<<user_choice;
+  std::cout << "\nComputer's choice: ";
+  if(computer==1) {
+    std::cout << "Rock\n";
+  }
+  if(computer==2) {
+    std::cout << "Paper\n";
+  }
+  if(computer==3) {
+    std::cout << "Scissor\n";
+  }
+  if(computer==4) {
+    std::cout << "Lizard\n";
+  }
+  if(computer==5) {
+    std::cout << "Spock\n";
+  }
+
+  // process the answer and declare the winner
+
+  if(user_choice==1) {
+    if(computer==1) {
+      std::cout << "Rock equals Rock\n";
+      std::cout << "It's a tie! \n";
+      c_score= c_score+0;
+      u_score = u_score+0;
+
+    }
+    if(computer==2) {
+      std::cout << "Paper covers Rock\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score = c_score+1;
+
+    }
+    if(computer==3) {
+      std::cout << "Rock crushes scissor\n";
+      std::cout << "User wins this shot!\n";
+      u_score = u_score+1;
+
+    }
+    if(computer==4) {
+      std::cout << "Rock crushes Lizard\n";
+      std::cout << "User wins this shot!\n";
+      u_score = u_score+1;
+
+    }
+    if(computer==5) {
+      std::cout << "Spock vaporizes Rock\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score = c_score+1;
+    }
+  }
+
+  if(user_choice==2) {
+    if(computer==1) {
+      std::cout << "Paper covers Rock\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+    if(computer==2) {
+      std::cout << "Paper equals Paper\n";
+      std::cout << "It's a tie!\n";
+      c_score=c_score+0;
+      u_score=u_score+0;
+    }
+    if(computer==3) {
+      std::cout << "Scissors cuts Paper\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score=c_score+1;
+    }
+    if(computer==4) {
+      std::cout << "Lizard eats Paper\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score=c_score+1;
+    }
+    if(computer==5) {
+      std::cout << "Paper disproves Spock\n";
+      std::cout << "User wins this shot!\n";
+      u_score = u_score+1;
+    }
+  }
+  if(user_choice==3) {
+    if(computer==1 ){
+      std::cout << "Rock crushes Scissor\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score=c_score+1;
+    }
+     if(computer==2 ){
+      std::cout << "Scissor cuts Paper\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+     if(computer==3 ){
+      std::cout << "Scissor equals Scissor\n";
+      std::cout << "It's a tie!\n";
+      c_score=c_score+0;
+      u_score=u_score+0;
+    }
+     if(computer==4){
+      std::cout << "Scissor decapitate Lizard\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+     if(computer==5 ){
+      std::cout << "Spock smashes Scissor\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+  }
+  if(user_choice==4) {
+    if(computer==1 ){
+      std::cout << "Rock crushes Lizard\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score=c_score+1;
+    }
+     if(computer==2 ){
+      std::cout << "Lizard eats Paper\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+     if(computer==3 ){
+      std::cout << "Scissor decapitate Lizard\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score=c_score+1;
+      u_score=u_score+0;
+    }
+     if(computer==4){
+      std::cout << "Lizard equals Lizard\n";
+      std::cout << "Its a tie!\n";
+      u_score=u_score+0;
+      c_score=c_score+0;
+    }
+     if(computer==5 ){
+      std::cout << "Lizard poisons Spock\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+  }
+if(user_choice==5) {
+    if(computer==1 ){
+      std::cout << "Spock vaporizes Rock\n";
+      std::cout << "User wins this shot!\n";
+      u_score=u_score+1;
+    }
+     if(computer==2 ){
+      std::cout <<  "Paper disproves Spock\n";
+      std::cout << "Computer wins this shot!\n";
+      c_score=c_score+1;
+    }
+     if(computer==3 ){
+      std::cout << "Spock smashes Scissor\n";
+      std::cout << "User wins this shot!\n";
+      c_score=c_score+0;
+      u_score=u_score+1;
+    }
+     if(computer==4){
+      std::cout << "Lizard poisons Spock\n";
+      std::cout << "Computer wins this shot!\n";
+      u_score=u_score+0;
+      c_score=c_score+1;
+    }
+     if(computer==5 ){
+      std::cout << "Spock equals Spock\n";
+      std::cout << "It's a tie!\n";
+      u_score=u_score+0;
+      c_score =c_score+0;
+    }
+   }
+   i++;
+  }while(i<5);
+
+  //Final result:
+  std::cout<<"This is the end of the game !\n";
+  if(c_score > u_score) {
+    std::cout << "The winner of this game is Computer , Points: " << c_score;
+  }
+  else if(u_score>c_score) {
+    std::cout << "The winner of this game is User, Points: " << u_score;
+  }
+  else {
+    std::cout << "The game is tied !";
+  }
+
+  std::cout << "\nThank You , Goodbye!\n";
+
+
+
+  }
+
+
+
+
+  
